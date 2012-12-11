@@ -5,7 +5,7 @@
 Summary:	The compiling PHP template engine
 Name:		php-smarty2
 Version:	2.6.26
-Release:	%mkrel 2
+Release:	2
 License:	LGPL
 Group:		Development/Other
 URL:		http://www.smarty.net/
@@ -13,7 +13,7 @@ Source0:	http://www.smarty.net/distributions/Smarty-%{version}.tar.gz
 Source1:	http://www.smarty.net/distributions/manual/en/Smarty-2.6.14-docs.tar.gz
 Source2:	smarty.gif
 BuildArch:	noarch
-Conflicts: 	php-smarty
+Obsoletes: 	php-smarty
 
 
 %description
@@ -59,11 +59,8 @@ The HTML manual for Smarty
 %{__mkdir_p} %{buildroot}%{_datadir}/php/smarty
 %{__mkdir_p} %{buildroot}%{_var}/www/icons
 
-%{__cp} -aRf libs/* %{buildroot}%{_datadir}/php/smarty
+cp -aRf libs/* %{buildroot}%{_datadir}/php/smarty
 %{__install} -m0644 %{SOURCE2} %{buildroot}/var/www/icons/smarty.gif
-
-%clean
-%{__rm} -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -74,3 +71,10 @@ The HTML manual for Smarty
 %files doc
 %defattr(-,root,root)
 %doc manual/*
+
+
+%changelog
+* Sat May 14 2011 Thomas Spuhler <tspuhler@mandriva.org> 2.6.26-1mdv2011.0
++ Revision: 674722
+- imported package php-smarty2
+
