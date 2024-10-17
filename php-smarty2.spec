@@ -8,7 +8,7 @@ Version:	2.6.26
 Release:	3
 License:	LGPL
 Group:		Development/Other
-URL:		http://www.smarty.net/
+URL:		https://www.smarty.net/
 Source0:	http://www.smarty.net/distributions/Smarty-%{version}.tar.gz
 Source1:	http://www.smarty.net/distributions/manual/en/Smarty-2.6.14-docs.tar.gz
 Source2:	smarty.gif
